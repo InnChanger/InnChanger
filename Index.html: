@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>InnChanger | AI Film Platform</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">InnChanger</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Change Faces in Videos. Powered by AI.</h1>
+    <p>Create cinematic magic with advanced face-swapping, 3D & VFX — fast and simple.</p>
+    <a href="#" class="btn-primary">Get Started</a>
+  </section>
+</body>
+</html>￼Enter
