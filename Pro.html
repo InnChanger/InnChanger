@@ -1,0 +1,91 @@
+<header>
+  <div class="logo">InnChanger AI</div>
+  <nav id="nav-links">
+    <a href="#home">Home</a>
+    <a href="#features">Features</a>
+    <a href="#demo">Demo</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+</header>
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #000;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 60%;
+    padding: 20px;
+  }
+
+  nav a {
+    padding: 10px 0;
+    color: #00ffcc;
+  }
+
+  .menu-toggle {
+    display: block;
+    color: #00ffcc;
+  }
+}function toggleMenu() {
+  const nav = document.getElementById("nav-links");
+  nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+}<footer>
+  <div class="footer-content">
+    <p>&copy; 2025 InnChanger AI | Made with passion for the world</p>
+    <p><a href="mailto:support@innchanger.com">support@innchanger.com</a></p>
+  </div>
+</footer>footer {
+  background: #000;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #00ffcc;
+  text-decoration: none;
+}<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Page Not Found</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="error-404">
+    <h1>404</h1>
+    <p>Oops! The page you're looking for doesn’t exist.</p>
+    <a href="index.html" class="btn">Back to Home</a>
+  </section>
+</body>
+</html>.error-404 {
+  height: 100vh;
+  background: #111;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.error-404 h1 {
+  font-size: 8rem;
+  color: #00ffcc;
+}
+
+.error-404 p {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
