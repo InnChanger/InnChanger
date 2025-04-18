@@ -1,0 +1,74 @@
+<!DOCT<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Film Generator - InnChanger</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0b0c10;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+    }
+    input, textarea, button {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    button {
+      background-color: #00e6e6;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #00cccc;
+    }
+    .output {
+      margin-top: 20px;
+      background: #1f2833;
+      padding: 15px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>AI Film Generator</h1>
+    <form id="filmForm">
+      <label for="prompt">Shyiramo igitekerezo cyawe:</label>
+      <textarea id="prompt" name="prompt" placeholder="Urugero: Nshaka film y’umwana w’umukobwa uhura n’akaga, hanyuma alien ikaza kumufasha..." required></textarea>
+      
+      <label for="photo">Ohereza ifoto (optional):</label>
+      <input type="file" id="photo" name="photo" accept="image/*">
+      
+      <label for="voice">Shyiramo amajwi (optional):</label>
+      <input type="file" id="voice" name="voice" accept="audio/*">
+
+      <button type="submit">Generate Film</button>
+    </form>
+
+    <div class="output" id="outputZone">
+      <h2>Results:</h2>
+      <p>Nta film iratunganywa. Tegereza gato...</p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("filmForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("outputZone").innerHTML = "<h2>Results:</h2><p>Processing... Please wait.</p>";
+    });
+  </script>
+</body>
+</html>￼Enter
