@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Assistant - Film Maker</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #000000;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    .ai-box {
+      max-width: 700px;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 20px;
+      background: linear-gradient(to bottom right, #111, #333);
+      box-shadow: 0 0 20px #0ff;
+    }
+    h2 {
+      text-align: center;
+      color: #0ff;
+      margin-bottom: 20px;
+    }
+    textarea {
+      width: 100%;
+      padding: 15px;
+      font-size: 1em;
+      border-radius: 10px;
+      border: none;
+      margin-bottom: 15px;
+      resize: vertical;
+    }
+    button {
+      width: 100%;
+      padding: 15px;
+      font-size: 1.2em;
+      background: #0ff;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0dd;
+    }
+    .response {
+      margin-top: 20px;
+      background: #222;
+      padding: 15px;
+      border-radius: 10px;
+      min-height: 150px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="ai-box">
+    <h2>AI Film Assistant</h2>
+    <textarea id="idea" rows="6" placeholder="Andika igitekerezo cya film, AI izagikurikirana ikore scene, voice, amafoto n’ibindi..."></textarea>
+    <button onclick="generateFilm()">Tangira Gutunganya Film</button>
+    <div class="response" id="output">Ibisubizo by’umutwe wa AI bizagaragara hano...</div>
+  </div>
+
+  <script>
+    function generateFilm() {
+      const prompt = document.getElementById('idea').value;
+      const output = document.getElementById('output');
+      output.innerHTML = "AI irimo gutekereza...";
+
+      setTimeout(() => {
+        output.innerHTML = `FILM TITLE: Nyuma y'Icyorezo\n\nAI yakoze film ishingiye kuri: "${prompt}"\n\nScenes: 5\nSupernatural Robots & Aliens ziri muri storyline\nVoice-over izakorwa hashingiwe kuri script.\n\n[Note: AI Film Engine in development - this is a simulated result.]`;
+      }, 3000);
+    }
+  </script>
+</body>
+</html>￼Enter
