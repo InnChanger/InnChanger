@@ -1,0 +1,91 @@
+<!-- Contact Section -->
+<section class="contact" id="contact">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+      <input type="text" name="name" placeholder="Your name" required />
+      <input type="email" name="email" placeholder="Your email" required />
+      <textarea name="message" rows="5" placeholder="Your message..." required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </div>
+</section>￼Enter.contact {
+  padding: 70px 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color: #00ffcc;
+  color: #000;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}<!-- Demo Preview Section -->
+<section class="demo">
+  <div class="container">
+    <h2>Try InnChanger AI Demo</h2>
+    <p>Upload a short video clip and see how our AI transforms faces, styles, or adds VFX instantly!</p>
+    <video width="100%" controls poster="preview.jpg">
+      <source src="demo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>.demo {
+  background-color: #000;
+  color: #fff;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.demo p {
+  max-width: 600px;
+  margin: 10px auto 30px;
+}<!-- Call to Action Section -->
+<section class="cta">
+  <div class="container">
+    <h2>Ready to Create Like a Pro?</h2>
+    <p>Start your journey with InnChanger AI – no experience needed. Just ideas.</p>
+    <a href="#pricing" class="btn">Get Started</a>
+  </div>
+</section>.cta {
+  background: linear-gradient(to right, #00ffcc, #0099ff);
+  color: #000;
+  padding: 80px 20px;
+  text-align: center;
+  border-radius: 20px;
+  margin: 60px 0;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.cta p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
