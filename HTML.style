@@ -1,0 +1,148 @@
+<!-- Navigation Bar -->
+<header class="navbar">
+  <div class="container nav-flex">
+    <div class="logo">InnChanger</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>.navbar {
+  background: #000;
+  color: #00ffcc;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #00ffcc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}<!-- About Section -->
+<section class="about" id="about">
+  <div class="container">
+    <h2>About InnChanger</h2>
+    <p>InnChanger is an AI-powered creative platform for changing faces, creating 3D animations, and editing videos like never before. Built with love in Rwanda, made for the world.</p>
+    <p>We use the latest AI to help creators transform their ideas into stunning visuals – effortlessly and instantly.</p>
+  </div>
+</section>.about {
+  background-color: #fff;
+  color: #000;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 10px auto;
+}<!-- Pricing Section -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <h2>Choose Your Plan</h2>
+    <div class="pricing-grid">
+
+      <div class="plan">
+        <h3>Free Trial</h3>
+        <p class="price">$0</p>
+        <ul>
+          <li>5-second face change</li>
+          <li>Basic VFX tools</li>
+          <li>Mobile support</li>
+        </ul>
+        <a href="#" class="btn">Try Free</a>
+      </div>
+
+      <div class="plan featured">
+        <h3>Pro Creator</h3>
+        <p class="price">$9.99/mo</p>
+        <ul>
+          <li>Unlimited face changes</li>
+          <li>3D & VFX full access</li>
+          <li>Priority rendering</li>
+        </ul>
+        <a href="#" class="btn">Subscribe</a>
+      </div>
+
+    </div>
+  </div>
+</section>.pricing {
+  background-color: #0d0d0d;
+  color: #fff;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.pricing h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.plan {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0,255,204,0.1);
+}
+
+.plan.featured {
+  border: 2px solid #00ffcc;
+}
+
+.plan h3 {
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 2rem;
+  color: #00ffcc;
+  margin: 10px 0 20px;
+}
+
+.plan ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.plan ul li {
+  margin: 10px 0;
+}
