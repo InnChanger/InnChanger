@@ -1,0 +1,81 @@
+const axios = require('axios');
+app.post('/generate-video', upload.single('photo'), async (req, res) => {
+  try {
+    const { prompt } = req.body;
+    const photoPath = req.file.path;
+
+    if (!prompt || !req.file) {
+      return res.status(400).send("Please upload a photo and provide a prompt.");
+    }
+
+    // Calling external AI API to generate the video
+    const aiResponse = await axios.post('https://ai.example.com/generate', {
+      photo: photoPath,
+      prompt: prompt
+    });
+
+    const videoUrl = aiResponse.data.videoUrl;  // Assuming the response includes the video URL.
+    res.json({ videoUrl });
+  } catch (error) {
+    console.error('Error:', error);
+    res.status(500).send('Error generating video: ' + error.message);
+  }
+});￼Enterimport React, { useState } from 'react';
+
+function App() {
+  const [videoUrl, setVideoUrl] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData();
+    formData.append('photo', event.target.photo.files[0]);
+    formData.append('prompt', event.target.prompt.value);
+
+    setIsLoading(true);
+
+    const response = await fetch('/generate-video', {
+      method: 'POST',
+      body: formData,
+    });
+    const data = await response.json();
+
+    if (data.videoUrl) {
+      setVideoUrl(data.videoUrl);
+    }
+
+    setIsLoading(false);
+  };
+
+  return (
+    <div>
+      <h1>AI Video Generator</h1>
+      <form onSubmit={handleSubmit}>
+        <input type="file" name="photo" accept="image/*" required />
+        <textarea name="prompt" placeholder="Enter video description" required></textarea>
+        <button type="submit" disabled={isLoading}>
+          {isLoading ? 'Generating...' : 'Generate Video'}
+        </button>
+      </form>
+
+      {videoUrl && (
+        <div>
+          <h2>Your Video</h2>
+          <video src={videoUrl} controls></video>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default App;<div id="loading" class="loader">
+  <p>Loading...</p>
+</div>@media screen and (max-width: 768px) {
+  /* Styles for small devices (mobile phones) */
+  body {
+    font-size: 14px;
+  }
+  button {
+    width: 100%;
+  }
+}
