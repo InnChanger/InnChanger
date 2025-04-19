@@ -1,0 +1,88 @@
+<section id="ai-generator">
+  <h2>Create Your Video with AI</h2>
+  <form id="ai-form">
+    <label for="photo-upload">Upload Your Photo:</label>
+    <input type="file" id="photo-upload" accept="image/*" required />
+    
+    <label for="ai-prompt">Enter a Prompt (e.g., "Sci-fi scene with a robot and spaceship"):</label>
+    <textarea id="ai-prompt" placeholder="Describe your video" required></textarea>
+    
+    <button type="submit" id="generate-btn">Generate Video</button>
+  </form>
+  
+  <div id="loading" style="display: none;">
+    <p>Processing your video...</p>
+  </div>
+  
+  <div id="result" style="display: none;">
+    <h3>Your Generated Video</h3>
+    <video id="generated-video" controls></video>
+  </div>
+</section>￼Enter#ai-generator {
+  padding: 40px 20px;
+  text-align: center;
+  background: #222;
+  color: #fff;
+}
+
+#ai-form {
+  display: inline-block;
+  max-width: 500px;
+  text-align: left;
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #00ffcc;
+}
+
+#ai-form input, #ai-form textarea, #ai-form button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+#generate-btn {
+  background: #00ffcc;
+  color: #000;
+  cursor: pointer;
+}
+
+#loading, #result {
+  margin-top: 20px;
+}
+
+#generated-video {
+  width: 100%;
+  height: auto;
+}<script>
+  document.getElementById('ai-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission
+    
+    const photo = document.getElementById('photo-upload').files[0];
+    const prompt = document.getElementById('ai-prompt').value;
+    
+    if (!photo || !prompt) {
+      alert("Please upload a photo and provide a prompt.");
+      return;
+    }
+    
+    // Show loading message
+    document.getElementById('loading').style.display = 'block';
+    document.getElementById('generate-btn').disabled = true;
+    
+    // Here, you would integrate the API call to generate the video
+    setTimeout(function() {
+      // Mock video generation (In reality, call the backend API to generate the video)
+      const videoUrl = 'https://www.example.com/generated-video.mp4'; // Replace with actual video URL
+
+      // Hide loading message
+      document.getElementById('loading').style.display = 'none';
+
+      // Show result
+      document.getElementById('result').style.display = 'block';
+      document.getElementById('generated-video').src = videoUrl;
+    }, 3000); // Simulate 3 seconds of processing
+  });
+</script>
